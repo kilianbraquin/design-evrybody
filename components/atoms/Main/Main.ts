@@ -9,7 +9,7 @@ export const Main = styled("main", {
   minHeight: `calc($h-screen - ${MobileHeadSize})`,
   marginTop: MobileHeadSize,
   padding: "$12",
-  paddingBottom: "env(safe-area-inset-bottom, 0) + $12",
+  paddingBottom: "calc(env(safe-area-inset-bottom, 0) + $12)",
   width: "$w-screen",
   [`& > ${SectionContainer} + ${SectionContainer}`]: {
     marginTop: "$24",

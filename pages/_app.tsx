@@ -22,8 +22,16 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
 
   useEffect(() => {
     if (theme === "dark") document.body.className = darkTheme;
-    else document.body.className = "";
+    return () => {
+      document.body.className = "";
+    };
   }, [theme]);
+
+  useEffect(() => {
+    if (activeMenu) {
+      window.scrollTo({ top: 0 });
+    }
+  }, [activeMenu]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

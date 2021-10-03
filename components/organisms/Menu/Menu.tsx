@@ -24,7 +24,7 @@ export const MenuHeader = styled("header", {
   color: "$loContrast",
   width: MenuWidth,
   paddingTop: "$32",
-  paddingBottom: "$16",
+  paddingBottom: "calc(env(safe-area-inset-bottom, 0) + $16)",
   height: "100vh",
 });
 
