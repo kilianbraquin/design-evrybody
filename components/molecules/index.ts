@@ -5,4 +5,3 @@ export * from "./CalendarYear";
 export * from "./List";
 export * from "./Question";
 export * from "./Section";
-export * from "./TestimonialCard";

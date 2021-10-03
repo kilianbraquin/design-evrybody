@@ -10,11 +10,11 @@ import { FC, useContext } from "react";
 export const MenuWidth = "270px";
 
 const links = [
-  { label: "Présentation", href: "#" },
-  { label: "Calendrier", href: "#" },
-  { label: "Anciens Étudiants", href: "#" },
-  { label: "FAQ", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Présentation", href: "/#introduction" },
+  { label: "Calendrier", href: "/#calendar" },
+  { label: "Anciens Étudiants", href: "/#testimonials" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const MenuHeader = styled("header", {

@@ -223,6 +223,8 @@ export const globalStyles = globalCss({
   "html, body": {
     overflowX: "hidden",
     overscrollBehaviorY: "none",
+    scrollBehavior: "smooth",
+    scrollPaddingTop: "10px",
   },
   body: {
     background: "$background",

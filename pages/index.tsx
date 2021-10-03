@@ -1,6 +1,7 @@
 import { HomeTemplate } from "@components/templates";
 import type { EventDTO, QuestionDTO, TestimonialDTO } from "@dto";
 import { GetStaticProps, NextPage } from "next";
+import { NextSeo } from "next-seo";
 
 const questionsExport: QuestionDTO[] = [
   {
@@ -99,7 +100,7 @@ const testimonialsExport: TestimonialDTO[] = [
   {
     _id: "60b9e4b71f73220009d0e9e6",
     content:
-      "orem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas tincidunt mi, vel bibendum ante bibendum nec. Etiam ligula leo, dictum ac pretium suscipit, sollicitudin vel est. Ut et massa a justo accumsan eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam egestas tincidunt mi, vel bibendum ante bibendum nec. Etiam ligula leo, dictum ac pretium suscipit, sollicitudin vel est. Ut et massa a justo accumsan eleifend.",
     description: "Voilà un test",
     firstname: "Un",
     lastname: " Etudiant",
@@ -123,12 +124,15 @@ const Home: NextPage<HomeProps> = ({
   questions,
   testimonials,
 }) => (
-  <HomeTemplate
-    introduction={introduction}
-    events={events}
-    questions={questions}
-    testimonials={testimonials}
-  />
+  <>
+    <NextSeo title="EvryBody | BDE Miagiste de l'universite Paris-Saclay" />
+    <HomeTemplate
+      introduction={introduction}
+      events={events}
+      questions={questions}
+      testimonials={testimonials}
+    />
+  </>
 );
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {

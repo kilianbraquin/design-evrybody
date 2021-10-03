@@ -10,6 +10,7 @@ export const SectionContainer = styled("section", {
 
 export type SectionProps = {
   css?: CSS;
+  id?: string;
   title?: string;
   titleAs?: IntrinsicElementsKeys;
 };
@@ -17,11 +18,12 @@ export type SectionProps = {
 export const Section: FC<SectionProps> = ({
   children,
   css,
+  id,
   title = "",
   titleAs = "h2",
 }) => {
   return (
-    <SectionContainer css={css}>
+    <SectionContainer id={id} css={css}>
       <Text as={titleAs} align="center" type="title">
         {title}
       </Text>
