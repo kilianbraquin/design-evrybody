@@ -1,4 +1,4 @@
-import { Button, InputText, Overlay, Text } from "@components/atoms";
+import { Button, Form, InputText, Overlay, Text } from "@components/atoms";
 import { SocialList } from "@components/molecules";
 import { styled, VariantProps } from "@stitches";
 import { NewsletterContext } from "contexts";
@@ -54,8 +54,18 @@ export const NewsletterModal: FC<NewsletterModalProps> = (props) => {
           Soyez informés de nos dernières actualités et de nos prochains
           événements.
         </Text>
-        <InputText width="full" type="email" />
-        <Button style="border">{"S'inscrire"}</Button>
+        <Form css={{ width: "$full" }} name="test">
+          <div>
+            <InputText name="email" width="full" type="email" />
+          </div>
+          <Button
+            type="submit"
+            css={{ mx: "auto", marginTop: "$12" }}
+            style="border"
+          >
+            {"S'inscrire"}
+          </Button>
+        </Form>
         <SocialList />
       </NewsletterModalBox>
     </Overlay>
