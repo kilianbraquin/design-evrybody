@@ -9,6 +9,7 @@ export const Button = styled("button", {
   fontWeight: "bold",
   variants: {
     color: {
+      neutral: {},
       primary: {},
     },
     style: {
@@ -16,6 +17,7 @@ export const Button = styled("button", {
         color: "$loContrast",
       },
       border: {
+        borderStyle: "$solid",
         borderWidth: "$2",
       },
     },
@@ -28,6 +30,40 @@ export const Button = styled("button", {
         backgroundColor: "$primary9",
         "&:hover": {
           backgroundColor: "$primary10",
+        },
+      },
+    },
+    {
+      color: "primary",
+      style: "border",
+      css: {
+        backgroundColor: "$neutral2",
+        borderColor: "$primary7",
+        color: "$primary11",
+        "&:hover": {
+          borderColor: "$primary8",
+        },
+      },
+    },
+    {
+      color: "neutral",
+      style: "default",
+      css: {
+        backgroundColor: "$neutral9",
+        "&:hover": {
+          backgroundColor: "$neutral10",
+        },
+      },
+    },
+    {
+      color: "neutral",
+      style: "border",
+      css: {
+        backgroundColor: "$neutral2",
+        borderColor: "$neutral7",
+        color: "$neutral11",
+        "&:hover": {
+          borderColor: "$neutral8",
         },
       },
     },

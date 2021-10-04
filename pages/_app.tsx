@@ -1,13 +1,18 @@
 import { darkTheme, globalStyles } from "@stitches";
-import { ThemeContext, ThemeOption } from "contexts";
-import { MenuContext } from "contexts/MenuContext";
+import {
+  MenuContext,
+  NewsletterContext,
+  ThemeContext,
+  ThemeOption,
+} from "contexts";
 import "destyle.css/destyle.min.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { FC, useEffect, useState } from "react";
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
-  const [activeMenu, setActiveMenu] = useState<boolean>(false);
+  const [displayNewsletterModal, setDisplayNewsletterModal] = useState(false);
+  const [activeMenu, setActiveMenu] = useState(false);
   const [theme, setTheme] = useState<ThemeOption>("light");
 
   useEffect(() => {
@@ -21,9 +26,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   }, []);
 
   useEffect(() => {
-    if (theme === "dark") document.body.className = darkTheme;
+    if (theme === "dark") document.body.classList.add(darkTheme);
     return () => {
-      document.body.className = "";
+      document.body.classList.remove(darkTheme);
     };
   }, [theme]);
 
@@ -36,10 +41,17 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <MenuContext.Provider value={{ activeMenu, setActiveMenu }}>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
-        <Component {...pageProps} />
+        <NewsletterContext.Provider
+          value={{ displayNewsletterModal, setDisplayNewsletterModal }}
+        >
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+          </Head>
+          <Component {...pageProps} />
+        </NewsletterContext.Provider>
       </MenuContext.Provider>
     </ThemeContext.Provider>
   );

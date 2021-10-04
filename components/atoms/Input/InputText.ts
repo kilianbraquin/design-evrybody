@@ -1,21 +1,47 @@
 import { styled } from "@stitches";
 
 export const InputText = styled("input", {
-  background: "$neutral2",
-  borderColor: "$neutral7",
   borderWidth: "3px",
   borderStyle: "$solid",
-  color: "$neutral12",
   display: "block",
   borderRadius: "$xl",
   fontFamily: "$headline",
   resize: "none",
   padding: "6px 12px",
-  "&:focus": {
-    borderColor: "$neutral8",
-    outline: "none",
+  variants: {
+    color: {
+      primary: {
+        color: "$primary12",
+        background: "$primary2",
+        borderColor: "$primary7",
+        "&:focus": {
+          borderColor: "$primary8",
+          outline: "none",
+        },
+        "&::placeholder": {
+          color: "$primary12",
+        },
+      },
+      neutral: {
+        color: "$neutral12",
+        background: "$neutral2",
+        borderColor: "$neutral7",
+        "&:focus": {
+          borderColor: "$neutral8",
+          outline: "none",
+        },
+        "&::placeholder": {
+          color: "$neutral12",
+        },
+      },
+    },
+    width: {
+      full: {
+        width: "$full",
+      },
+    },
   },
-  "&::placeholder": {
-    color: "$neutral12",
+  defaultVariants: {
+    color: "neutral",
   },
 });

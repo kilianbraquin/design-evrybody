@@ -1,5 +1,5 @@
-import { ListItem } from "@components/atoms";
 import { styled } from "@stitches";
+import { ListItem } from "./ListItem";
 
 export const List = styled("ul", {
   variants: {

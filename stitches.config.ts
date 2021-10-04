@@ -1,4 +1,4 @@
-import { brown, brownDark, slate, slateDark } from "@radix-ui/colors";
+import { blackA, brown, brownDark, slate, slateDark } from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
 import { createStitches, PropertyValue } from "@stitches/react";
 
@@ -46,6 +46,7 @@ export const { createTheme, styled, getCssText, globalCss, config } =
       colors: {
         ...brown,
         ...slate,
+        ...blackA,
 
         primary1: "$brown1",
         primary2: "$brown2",
@@ -75,6 +76,8 @@ export const { createTheme, styled, getCssText, globalCss, config } =
 
         background: "$brown10",
         loContrast: "$primary1",
+
+        overlay: "$blackA10",
       },
       fontSizes: {
         xs: "12px",

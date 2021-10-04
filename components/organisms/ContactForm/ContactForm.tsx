@@ -9,7 +9,7 @@ const Form = styled("form", {
   [`& > textarea`]: {
     height: "$192",
   },
-  [`& > *`]: {
+  [`& > textarea, & > input`]: {
     width: "$full",
   },
   [`& > * + *`]: {

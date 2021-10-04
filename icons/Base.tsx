@@ -4,6 +4,17 @@ import { FC, MouseEvent, useMemo } from "react";
 export const SVGIcon = styled("svg", {
   verticalAlign: "middle",
   variants: {
+    color: {
+      primary: {
+        color: "$primary9",
+      },
+      loContrast: {
+        color: "$loContrast",
+      },
+      dark: {
+        color: "$neutral12",
+      },
+    },
     cursor: {
       pointer: {
         cursor: "pointer",

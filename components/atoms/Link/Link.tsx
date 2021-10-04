@@ -6,6 +6,7 @@ type LinkProps = VariantProps<typeof Text> & {
   className?: string;
   css?: CSS;
   href?: string;
+  target?: "_blank";
 };
 
 export const Link: React.FC<LinkProps> = ({
@@ -15,7 +16,7 @@ export const Link: React.FC<LinkProps> = ({
   ...props
 }) => {
   return (
-    <NextLink href={href}>
+    <NextLink href={href} passHref>
       <Text as="a" className={className} cursor="pointer" {...props}>
         {children}
       </Text>

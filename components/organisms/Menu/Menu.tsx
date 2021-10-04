@@ -1,10 +1,9 @@
-import { Image, Link, ListItem, Text } from "@components/atoms";
-import { List } from "@components/molecules";
-import { Discord, Facebook, Instagram } from "@icons/brand";
+import { Image, Link, List, ListItem, Text } from "@components/atoms";
+import { SocialList } from "@components/molecules";
 import { Moon, Sun } from "@icons/regular";
 import { AnglesRight } from "@icons/solid";
 import { styled } from "@stitches";
-import { ThemeContext } from "contexts";
+import { NewsletterContext, ThemeContext } from "contexts";
 import { FC, useContext } from "react";
 
 export const MenuWidth = "270px";
@@ -37,6 +36,7 @@ export const MenuNav = styled("nav", {
 });
 
 export const Menu: FC = () => {
+  const { setDisplayNewsletterModal } = useContext(NewsletterContext);
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
@@ -80,20 +80,16 @@ export const Menu: FC = () => {
           />
         </ListItem>
       </List>
-      <Link css={{ marginTop: "$12" }} decoration="hoverUnderline">
+      <Text
+        as="span"
+        css={{ marginTop: "$12" }}
+        decoration="hoverUnderline"
+        cursor="pointer"
+        onClick={() => setDisplayNewsletterModal(true)}
+      >
         Rejoignez notre newsletter
-      </Link>
-      <List css={{ marginTop: "$16" }} space="spaceX2">
-        <ListItem>
-          <Facebook size={32} />
-        </ListItem>
-        <ListItem>
-          <Instagram size={32} />
-        </ListItem>
-        <ListItem>
-          <Discord size={32} />
-        </ListItem>
-      </List>
+      </Text>
+      <SocialList css={{ marginTop: "$16" }} color="loContrast" />
     </MenuHeader>
   );
 };

@@ -5,10 +5,12 @@ import {
   ContactForm,
   Menu,
   MobileHead,
+  NewsletterModal,
   Testimonials,
 } from "@components/organisms";
 import { EventDTO, QuestionDTO, TestimonialDTO } from "@dto";
 import { DefaultLayout } from "@layouts";
+import { NewsletterContext } from "contexts";
 import { MenuContext } from "contexts/MenuContext";
 import { FC, useContext } from "react";
 
@@ -26,9 +28,11 @@ export const HomeTemplate: FC<HomeTemplateProps> = ({
   testimonials,
 }) => {
   const { activeMenu, setActiveMenu } = useContext(MenuContext);
+  const { displayNewsletterModal } = useContext(NewsletterContext);
 
   return (
     <DefaultLayout navActive={activeMenu}>
+      <NewsletterModal hidden={!displayNewsletterModal} />
       <Menu />
       <MobileHead />
       <Main onClick={() => setActiveMenu(false)}>

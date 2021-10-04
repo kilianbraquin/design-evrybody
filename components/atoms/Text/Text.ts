@@ -5,6 +5,11 @@ export const Text = styled("p", {
   whiteSpace: "pre-line",
 
   variants: {
+    color: {
+      primary: {
+        color: "$primary11",
+      },
+    },
     cursor: {
       pointer: {
         cursor: "pointer",
@@ -39,6 +44,9 @@ export const Text = styled("p", {
     size: {
       lg: {
         fontSize: "$lg",
+      },
+      xl: {
+        fontSize: "$xl",
       },
     },
     type: {

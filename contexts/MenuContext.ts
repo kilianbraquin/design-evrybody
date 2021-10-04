@@ -1,10 +1,8 @@
-import { createContext } from "react";
+import { createContext, Dispatch, SetStateAction } from "react";
 
 export type MenuContextProps = {
   activeMenu: boolean;
-  setActiveMenu: (
-    newValue: boolean | ((previousValue: boolean) => boolean)
-  ) => void;
+  setActiveMenu: Dispatch<SetStateAction<boolean>>;
 };
 
 export const MenuContext = createContext<MenuContextProps>({

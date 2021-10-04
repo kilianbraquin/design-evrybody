@@ -2,8 +2,7 @@ import { Image } from "@components/atoms";
 import { Moon, Sun } from "@icons/regular";
 import { Bars } from "@icons/solid";
 import { styled } from "@stitches";
-import { ThemeContext } from "contexts";
-import { MenuContext } from "contexts/MenuContext";
+import { MenuContext, ThemeContext } from "contexts";
 import { FC, useContext, useMemo } from "react";
 
 export const MobileHeadSize = "62px";

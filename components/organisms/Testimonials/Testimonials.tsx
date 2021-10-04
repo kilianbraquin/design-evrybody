@@ -73,7 +73,7 @@ export const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
             <Text as="p">{content}</Text>
             <Text
               as="span"
-              css={{ color: "$neutral12", marginTop: "$8" }}
+              css={{ marginTop: "$8" }}
               family="headline"
               weight="bold"
             >{`${firstname} ${lastname}`}</Text>
