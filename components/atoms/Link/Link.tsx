@@ -7,6 +7,7 @@ type LinkProps = VariantProps<typeof Text> & {
   css?: CSS;
   href?: string;
   target?: "_blank";
+  onClick?: () => void;
 };
 
 export const Link: React.FC<LinkProps> = ({

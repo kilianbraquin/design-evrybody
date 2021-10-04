@@ -51,7 +51,13 @@ export const Menu: FC = () => {
         <List direction="column">
           {links.map(({ href, label }, index) => (
             <ListItem key={index}>
-              <Link href={href} weight="bold" family="headline" size="lg">
+              <Link
+                href={href}
+                weight="bold"
+                family="headline"
+                size="lg"
+                onClick={() => setDisplayNewsletterModal(false)}
+              >
                 <AnglesRight
                   css={{ marginRight: "$8", opacity: "0.6" }}
                   size={16}
