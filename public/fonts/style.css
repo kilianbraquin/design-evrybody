@@ -1,0 +1,35 @@
+/* karla-regular */
+@font-face {
+  font-display: swap;
+  font-family: "karla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/karla-regular.woff2");
+}
+
+/* karla-bold */
+@font-face {
+  font-display: swap;
+  font-family: "karla";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/karla-bold.woff2");
+}
+
+/* rubik-regular */
+@font-face {
+  font-display: swap;
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/rubik-regular.woff2");
+}
+
+/* rubik-bold */
+@font-face {
+  font-display: swap;
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/rubik-bold.woff2");
+}

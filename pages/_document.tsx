@@ -25,16 +25,20 @@ class MyDocument extends Document {
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossOrigin=""
-          />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-            rel="stylesheet"
-          />
+          {[
+            "rubik-regular.woff2",
+            "karla-regular.woff2",
+            "rubik-bold.woff2",
+          ].map((font) => (
+            <link
+              key={font}
+              rel="preload"
+              href={`/fonts/${font}`}
+              as="font"
+              type="font/woff2"
+              crossOrigin=""
+            />
+          ))}
         </Head>
         <body>
           <Main />

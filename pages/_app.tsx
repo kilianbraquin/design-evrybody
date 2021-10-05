@@ -9,6 +9,7 @@ import "destyle.css/destyle.min.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { FC, useEffect, useState } from "react";
+import "../public/fonts/style.css";
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   const [displayNewsletterModal, setDisplayNewsletterModal] = useState(false);
