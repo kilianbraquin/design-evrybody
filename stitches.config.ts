@@ -36,8 +36,8 @@ export const { createTheme, styled, getCssText, globalCss, config } =
         widest: "0.1em",
       },
       fonts: {
-        headline: "Rubik",
-        content: "Karla",
+        headline: "Rubik, Trebuchet MS, Tahoma, sans-serif",
+        content: "Karla, Arial, Helvetica, sans-serif",
       },
       fontWeights: {
         regular: 400,
