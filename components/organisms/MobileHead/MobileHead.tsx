@@ -60,7 +60,6 @@ export const MobileHead: FC = () => {
         height={36}
         width={192}
         alt="Texte contenant EvryBody"
-        priority
       />
       <ThemeIcon
         className="toggle-theme"

@@ -46,7 +46,6 @@ export const Menu: FC = () => {
         height={140}
         width={107}
         alt="Logo du BDE, un renard"
-        priority
       />
       <MenuNav>
         <List direction="column">
