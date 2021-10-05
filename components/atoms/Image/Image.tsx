@@ -7,7 +7,7 @@ const normalizeSrc = (src: string) => {
 
 export const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
   const cdnUrl = "https://cdn.kbraquin.com";
-  const params = [`width=${width}`];
+  const params = [`width=${width}`, `f=auto`];
   if (quality) {
     params.push(`quality=${quality}`);
   }
