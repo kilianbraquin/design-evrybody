@@ -1,10 +1,10 @@
-import { darkTheme, globalStyles } from "@stitches";
 import {
   MenuContext,
   NewsletterContext,
   ThemeContext,
   ThemeOption,
-} from "contexts";
+} from "@contexts";
+import { darkTheme, globalStyles } from "@stitches";
 import "destyle.css/destyle.min.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";

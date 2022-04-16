@@ -1,6 +1,6 @@
 import { blackA, brown, brownDark, slate, slateDark } from "@radix-ui/colors";
 import type * as Stitches from "@stitches/react";
-import { createStitches, PropertyValue } from "@stitches/react";
+import { createStitches } from "@stitches/react";
 
 export const { createTheme, styled, getCssText, globalCss, config } =
   createStitches({
@@ -171,15 +171,15 @@ export const { createTheme, styled, getCssText, globalCss, config } =
       xl: "(min-width: 1280px)",
     },
     utils: {
-      fontSize: (value: PropertyValue<"fontSize">) => ({
+      fontSize: (value: Stitches.PropertyValue<"fontSize">) => ({
         fontSize: value,
         lineHeight: value,
       }),
-      brTop: (value: PropertyValue<"borderRadius">) => ({
+      brTop: (value: Stitches.PropertyValue<"borderRadius">) => ({
         borderTopLeftRadius: value,
         borderTopRightRadius: value,
       }),
-      mx: (value: PropertyValue<"margin">) => ({
+      mx: (value: Stitches.PropertyValue<"margin">) => ({
         marginLeft: value,
         marginRight: value,
       }),

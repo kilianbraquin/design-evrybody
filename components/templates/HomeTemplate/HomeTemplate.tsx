@@ -8,10 +8,9 @@ import {
   NewsletterModal,
   Testimonials,
 } from "@components/organisms";
+import { MenuContext, NewsletterContext } from "@contexts";
 import { EventDTO, QuestionDTO, TestimonialDTO } from "@dto";
 import { DefaultLayout } from "@layouts";
-import { NewsletterContext } from "contexts";
-import { MenuContext } from "contexts/MenuContext";
 import { FC, useContext } from "react";
 
 type HomeTemplateProps = {

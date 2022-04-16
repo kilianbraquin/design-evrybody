@@ -1,9 +1,9 @@
 import { Image, Link, List, ListItem, Text } from "@components/atoms";
 import { SocialList } from "@components/molecules";
+import { NewsletterContext, ThemeContext } from "@contexts";
 import { Moon, Sun } from "@icons/regular";
 import { AnglesRight } from "@icons/solid";
 import { styled } from "@stitches";
-import { NewsletterContext, ThemeContext } from "contexts";
 import { FC, useContext } from "react";
 
 export const MenuWidth = "270px";

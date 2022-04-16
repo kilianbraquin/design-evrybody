@@ -1,7 +1,7 @@
 import { Button, Form, InputText, Overlay, Text } from "@components/atoms";
 import { SocialList } from "@components/molecules";
+import { NewsletterContext } from "@contexts";
 import { styled, VariantProps } from "@stitches";
-import { NewsletterContext } from "contexts";
 import { FC, useContext } from "react";
 
 export const NewsletterModalBox = styled("div", {
@@ -20,7 +20,6 @@ export const NewsletterModalBox = styled("div", {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  // boxShadow: "0px 0px 5px 5px rgb(0 0 0 / 40%)",
 
   "& > * + *": {
     marginTop: "$12",
