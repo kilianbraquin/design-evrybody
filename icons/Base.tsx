@@ -1,5 +1,5 @@
 import { CSS, styled, VariantProps } from "@stitches";
-import { FC, MouseEvent, useMemo } from "react";
+import { FC, MouseEvent, PropsWithChildren, useMemo } from "react";
 
 export const SVGIcon = styled("svg", {
   verticalAlign: "middle",
@@ -36,11 +36,13 @@ export type IconProps = VariantProps<typeof SVGIcon> & {
   size?: number | { width: number; height: number };
 };
 
-type Props = IconProps & {
-  viewBox: string;
-  defaultSize: number | { width: number; height: number };
-  fill?: string;
-};
+type Props = PropsWithChildren<
+  IconProps & {
+    viewBox: string;
+    defaultSize: number | { width: number; height: number };
+    fill?: string;
+  }
+>;
 
 export const Base: FC<Props> = ({
   children,

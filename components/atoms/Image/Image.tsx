@@ -6,13 +6,13 @@ const normalizeSrc = (src: string) => {
 };
 
 export const cloudflareLoader: ImageLoader = ({ src, width, quality }) => {
-  const cdnUrl = "https://cdn.kbraquin.com";
-  const params = [`width=${width}`, `f=auto`];
+  const cdnUrl = "https://cdn.indiebaie.com";
+  const params = [`width=${width}`, `format=auto`];
   if (quality) {
     params.push(`quality=${quality}`);
   }
-  const paramsString = params.join(",");
-  return `${cdnUrl}/cdn-cgi/image/${paramsString}/${normalizeSrc(src)}`;
+  const paramsString = params.join("&");
+  return `${cdnUrl}/${normalizeSrc(src)}?${paramsString}`;
 };
 
 export const Image: FC<ImageProps> = (props) => {

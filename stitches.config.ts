@@ -240,5 +240,5 @@ export const globalStyles = globalCss({
 });
 
 export type CSS = Stitches.CSS<typeof config>;
-export type VariantProps<T> = Stitches.VariantProps<T>;
+export type { VariantProps } from "@stitches/react";
 export type { IntrinsicElementsKeys } from "@stitches/react/types/styled-component";

@@ -1,5 +1,5 @@
 import { CSS, styled } from "@stitches";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 function encode(data) {
   return Object.keys(data)
@@ -7,10 +7,10 @@ function encode(data) {
     .join("&");
 }
 
-type Props = {
+type Props = PropsWithChildren<{
   css?: CSS;
   name?: string;
-};
+}>;
 
 const FormContainer = styled("form");
 

@@ -83,7 +83,7 @@ export const Testimonials: FC<TestimonialsProps> = ({ testimonials }) => {
           </TestimonialCard>
         )
       )}
-      <Link className="link">
+      <Link className="link" css={{ display: "block" }} fullWidth>
         <Text as="span">Voir tous les témoignages</Text>
         <ArrowRight css={{ marginLeft: "$8" }} size={16} />
       </Link>

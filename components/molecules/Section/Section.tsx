@@ -1,6 +1,6 @@
 import { Text } from "@components/atoms";
 import { CSS, IntrinsicElementsKeys, styled } from "@stitches";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 export const SectionContainer = styled("section", {
   [`& > * + *`]: {
@@ -8,12 +8,12 @@ export const SectionContainer = styled("section", {
   },
 });
 
-export type SectionProps = {
+export type SectionProps = PropsWithChildren<{
   css?: CSS;
   id?: string;
   title?: string;
   titleAs?: IntrinsicElementsKeys;
-};
+}>;
 
 export const Section: FC<SectionProps> = ({
   children,

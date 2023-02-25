@@ -1,12 +1,3 @@
 {
-  "plugins": ["@typescript-eslint"],
-  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
-  "rules": {
-    "no-console": [
-      1,
-      {
-        "allow": ["warn", "error"]
-      }
-    ]
-  }
+  "extends": "next/core-web-vitals"
 }
